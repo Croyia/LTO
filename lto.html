@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lto.css">
+</head>
+<body>
+
+    <section class="posTitle">
+
+        <img src="images/ph-logo.png" class="logoSize">
+        <h1 class="ltoTitle">
+            REPUBLIC OF THE PHILIPPINES <br>DEPARTMENT OF TRANSPORTATION & COMMUNICATIONS<br>
+            LAND TRANSPORTATION OFFICE
+        </h1>
+        <img src="images/lto-logo.png" class="logoSize">
+    </section>
+
+    <h3 class="ltoLoc">
+        East Avenue, Quezon City
+    </h3>
+
+    <h3 class="app">
+        APPLICATION FOR DRIVER'S LICENSE
+    </h3>
+
+    <section>
+        <form method="post" id="registration">
+
+            <p class="wrapperTitle">Basic Information</p>
+            <section class="infoWrapper">
+
+                
+                <p>Full Name</p>
+                <input type="text" id="family-name" name="family-name" placeholder="Family Name"><br>
+
+                <input type="text" id="first-name" name="first-name" placeholder="First Name"><br>
+
+                <input type="text" id="middle-name" name="middle-name" placeholder="Middle Name"><br>
+
+                <p>Telephone</p>
+                <input type="tel" id="tel-num" name="tel-num" placeholder="0912 456 8901" pattern="09[0-9]{2} [0-9]{3} [0-9]{4}"><br>
+
+                <p>Tin</p>
+                <input type="tin" id="tin" name="tin" placeholder="000-111-222-333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
+                    
+            
+               
+                
+                <p>Address</p>
+                <input type="text" id="house-num" name="house-num" placeholder="House Number"><br>
+                <input type="text" id="street" name="street" placeholder="Street" ><br>
+
+                <p style="margin-top: 0px;">Province</p>
+            
+                <select id="js-province" name="province">
+                    <option value="" disabled selected>Select Province</option>
+                    <option value="metro_manila">Metro Manila</option>
+                    <option value="quezon">Quezon</option>
+                    <option value="batangas">Batangas</option>
+                    <option value="cavite">Cavite</option>
+                    <option value="laguna">Laguna</option>
+                    <option value="rizal">Rizal</option>
+                </select>
+
+                <p>City/Municipality</p>
+                <select id="js-city" name="city">
+                    <option value="" disabled selected>Select City</option>
+                </select>
+               
+                
+                <p style="margin-top: 30px;">Nationality</p>
+                <input type="text" id="nation" name="nation" placeholder="Filipino">
+
+                <p style="margin-top: 30px; margin-bottom: 0px;">Sex</p>
+                
+                <section class="rad">
+                    <input type="radio" id="male" name="sex" value="male"><label for="male">Male</label> 
+                </section>
+                
+                <section>
+                    <input type="radio" id="female" name="sex" value="female"><label for="female">Female</label> 
+                </section>
+                    
+                
+                <p>Date of Birth</p>
+                <input type="date" id="bday" name="bday" min="1920-01-01" max="2007-12-31"><br>
+
+                <p>Biometrics</p>
+                <input type="text" id="height" name="height" pattern="[0-9]{3}"  placeholder="Height (cm)" style="margin-bottom: 12px;">
+                <input type="text" id="weight" name="weight" pattern="[0-9]{3}" placeholder="Weight (kg)">
+            </section>
+
+            <p class="wrapperTitle">Type of Application</p>
+
+            <section class="toaWrapper">
+
+                <div class="toaInfoWrapper">
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="new" value="new"><label for="">A. New</label>
+                    </div>
+                    
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="dormant" value="dormant"><label for="">B. Delinquent</label>
+                    </div>
+                    
+    
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="js-change-class" value="changeClass"><label for="">C. Change of Classification</label>
+    
+                        <div id="js-changeList" style="display:none; margin-top: 4px; margin-left: 22px; padding-top: 0px; color: rgb(0, 64, 128); font-size: 12px; ">
+                            <input type="radio" id="profchange" name="profchange" value="profToNon"><label for="profToNon">Pro to Non Pro</label> 
+        
+                            <input type="radio" id="profchange" name="profchange" value="nonToProf" style="margin-left: 8px;"><label for="nonToProf">Non Pro to Pro </label><br>
+                        </div>
+                    </div>
+    
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="foreign" value="foreign"><label for="foreign">D. Foreign</label>
+                    </div>
+    
+                </div>
+                
+                <div class="toaInfoWrapper">
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="renewal" value="renewal"><label for="renewal">E. Renewal</label>
+                    </div>
+                        
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="restriction" value="restriction"><label for="restriction">F. Restriction</label>
+                    </div>
+
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="duplicate" value="duplicate"><label for="duplicate">G. Duplicate</label>
+                    </div>
+
+                    <div style="margin-bottom: 4px;">
+                        <input type="checkbox" name="toa" id="js-revision" value="revision"><label for="revision">H. Revisions</label>
+
+                        <div id="js-revisionList" style="display:none; margin-left: 22px; color: rgb(0, 64, 128); font-size: 12px;">
+        
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" name="revisions" id="changeAddress" value="changeAddress"><label for="foreign">Change Address</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" name="revisions" id="changeCivil" value="changeCivil"><label for="renewal">Change Civil Status</label>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" name="revisions" id="changeName" value="changeName"><label for="restriction">Change Name</label>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" name="revisions" id="changeBirth" value="changeBirth"><label for="duplicate">Change Date of Birth</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+            
+            </section>  
+
+            
+            <p class="wrapperTitle">Education</p>
+            <section class="infoWrapper">
+                <p>License Type</p>
+                <select name="license-type" id="license-type">
+                    <option value="studPermit">Student Permit</option>
+                    <option value="nonPro">Non-Professional</option>
+                    <option value="pro">Professional</option>
+                    <option value="conductor">Conductor</option>
+                </select>
+                
+
+                <p style="margin-top: 28px;">Driving Skill</p>
+                <div class="alignRowCenter">
+                    <input type="checkbox" name="skill" id="driving-school" value="drivingSchool" style="margin-left: 12px;"><label for="driving-school" style="margin-left: 4px;" >Driving School</label>
+                    <input type="checkbox" name="skill" id="private-person" value="privatePerson" style="margin-left: 12px;"><label for="private-person" style="margin-left: 4px;">Licensed Private Person</label> 
+                </div>
+                
+
+                <p style="margin-top: 28px;">Educational Attainment</p>
+        
+                <select name="education" id="education">
+                    <option value="informal">Informal Schooling</option>
+                    <option value="elementary">Elementary</option>
+                    <option value="highschool">High School</option>
+                    <option value="vocational">Vocational</option>
+                    <option value="college">College</option>
+                    <option value="postGrad">Post Graduate</option>
+                </select>
+                    
+
+            </section>
+
+
+            <p class="wrapperTitle">Additional Information</p>
+            <section class="infoWrapper">
+
+                <p>Blood Type</p>
+                <select name="blood" id="blood">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <p style="margin-top: 20px;">Organ Donor</p>
+                    <section style="display: flex; align-items: start;">
+                        <section class="alignRowCenter">
+                            <input type="radio" id="donor-yes" name="donor" value="donorYes" style="margin-right: 4px;">Yes<label for="donor-yes"></label> 
+                        </section>
+                        <section class="alignRowCenter">
+                            <input type="radio" id="donor-no" name="donor" value="donorNo" style="margin-right: 4px;">No<label for="donor-no"></label>
+                        </section>
+                    </section>
+
+                <p>Civil Status</p>
+
+                <select name="civil" id="js-civil">
+
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="widow">Widow/er</option>
+                    <option value="separated">Separated</option>
+
+                </select>
+
+                <p>Hair</p>
+
+                <select id="hair-color" name="hair-color">
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="blonde">Blonde</option>
+                <option value="gray">Gray</option>
+                <option value="others">Others</option>
+                </select>
+                <input type="text" id="other-hair-color" name="hair-color" placeholder="Specify your hair color" style="display: none;">
+                
+                <p>Eyes</p>
+
+                <select id="eye-color" name="eye-color">
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="gray">Gray</option>
+                <option value="others">Others</option>
+                </select>
+                <input type="text" id="other-eye-color" name="eye-color" placeholder="Specify your eye color" style="display: none;">
+
+                <p>Built</p>
+
+                <select name="built" id="built">
+
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="heavy">Heavy</option>
+
+                </select>
+
+                <p>Complexion</p>
+
+                <select name="complexion" id="complexion">
+
+                    <option value="light">Light</option>
+                    <option value="fair">Fair</option>
+                    <option value="dark">Dark</option>
+
+                </select>
+
+                <p style="margin-top: 35px; margin-bottom: 5px;">Birthplace:</p>
+
+                <p style="margin-top: 0px;">Province</p>
+
+                <select id="js-birthProvince" name="birthProvince">
+
+                    <option value="" disabled selected>Select Province</option>
+                    <option value="metro_manila">Metro Manila</option>
+                    <option value="quezon">Quezon</option>
+                    <option value="batangas">Batangas</option>
+                    <option value="cavite">Cavite</option>
+                    <option value="laguna">Laguna</option>
+                    <option value="rizal">Rizal</option>
+                  </select>
+
+                <p>City/Municipality</p>
+                <select id="js-birthCity" name="birthCity">
+                    <option value="" disabled selected>Select City</option>
+
+                </select>
+
+            </section>
+
+            <p class="wrapperTitle">References</p>
+            <section class="infoWrapper">
+
+                <p style="margin-bottom: 0px;">Father's Name<p style="font-style: oblique; font-size: 12px; margin: 0px; font-weight: 500;">Indicate even if deceased</p></p>
+                <input type="text" id="father-family-name" name="father-family-name" placeholder="Family Name"><br>
+
+                <input type="text" id="father-first-name" name="father-first-name" placeholder="First Name"><br>
+
+                <input type="text" id="father-middle-name" name="father-middle-name" placeholder="Middle Name"><br>
+
+                <p style="margin-bottom: 0px;">Mother's Full Name<p style="font-style: oblique; font-size: 12px; margin: 0px; font-weight: 500;">Indicate even if deceased</p></p>
+                
+                <input type="text" id="mother-family-name" name="mother-family-name" placeholder="Family Name" ><br>
+
+                <input type="text" id="mother-first-name" name="mother-first-name" placeholder="First Name"><br>
+                
+                <input type="text" id="mother-middle-name" name="mother-middle-name" placeholder="Middle Name"><br>
+
+                <div id="js-spouse" style="display: none;">
+                    <p style="margin-bottom: 0px;">Spouse's Full Name<p style="font-style: oblique; font-size: 12px; margin: 0px; font-weight: 500;">Indicate even if deceased</p></p>
+                    <input type="text" id="spouse-family-name" name="spouse-family-name" placeholder="Family Name"><br>
+
+                   <input type="text" id="spouse-first-name" name="spouse-first-name" placeholder="First Name"><br>
+                    
+                   <input type="text" id="spouse-middle-name" name="spouse-middle-name" placeholder="Middle Name"><br>
+                </div>
+                
+
+                <p>Employer's Business Name</p>
+                <input type="text" id="employer-name" name="employer-name" placeholder="Full Name"><br>
+
+                <p>Employer's Telephone Number</p>
+                <input type="tel" id="employer-tel" name="employer-tel" placeholder="Telephone/Landline"><br>
+
+                <p>Employer's Business Address</p>
+                
+                <input type="text" id="emp-house-num" name="emp-house-num" placeholder="House Number"><br>
+               <input type="text" id="emp-street" name="emp-street" placeholder="Street"><br>
+
+               <p style="margin-top: 10px;">Province</p>
+                <select id="js-employerProvince" name="employerProvince">
+
+                    <option value="" disabled selected>Select Province</option>
+                    <option value="metro_manila">Metro Manila</option>
+                    <option value="quezon">Quezon</option>
+                    <option value="batangas">Batangas</option>
+                    <option value="cavite">Cavite</option>
+                    <option value="laguna">Laguna</option>
+                    <option value="rizal">Rizal</option>
+                  </select>
+
+                <p>City/Municipality</p>
+                <select id="js-employerCity" name="employerCity">
+                    <option value="" disabled selected>Select City</option>
+
+                </select>
+
+                <p style="margin-top: 30px; margin-bottom: 0px;">Previous License Name<p style="font-style: oblique; font-size: 12px; margin: 0px; font-weight: 500;">FILL THIS UP ONLY IF YOUR
+                    NAME ABOVE IS DIFFERENT
+                    FROM YOUR NAME IN
+                    PREVIOUS LICENSE</p></p>
+                <input type="text" id="prev-family-name" name="prev-family-name" placeholder="Family Name"><br>
+                <input type="text" id="prev-first-name" name="prev-first-name" placeholder="First Name"><br>
+                <input type="text" id="prev-middle-name" name="prev-middle-name" placeholder="Middle Name"><br>
+
+                <p style="margin-bottom: 0px;">Signature<p style="font-style: oblique; font-size: 12px; margin: 0px; font-weight: 500;">THIS IS TO CERTIFY THAT
+                    THE INFORMATION I HAVE
+                    GIVEN IS TRUE AND
+                    CORRECT.</p></p>
+                <div>
+                    <input type="file" name="signature" style="width: 99px;">
+                </div>
+            </section>
+
+            <section class="submitWrapper">
+                <input id="submit" type="submit" class="submitButton">
+            </section>
+
+        </form>
+    </section>
+
+    <script src="lto.js">
+       
+    </script>
+</body>
+</html>
